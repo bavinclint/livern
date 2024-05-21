@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "Created Footer component"
+git commit -m "loading and 404 page created"
 git push

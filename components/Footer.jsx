@@ -1,4 +1,4 @@
-import { Libre_Bodoni } from "next/font/google";
+import Link from "next/link";
 import {
   FaChevronRight,
   FaFacebookF,
@@ -8,11 +8,8 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-const bodoni = Libre_Bodoni({
-  subsets: ["latin"],
-});
-
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <footer className="text-sm">
@@ -43,33 +40,33 @@ const Footer = () => {
                 <ul className="text-[#b4aca8]">
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />{" "}
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />{" "}
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       About us
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />{" "}
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Terms of service
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Privacy policy
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -80,33 +77,33 @@ const Footer = () => {
                 <ul className="text-[#b4aca8]">
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Rent Property
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Buy Property
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Development
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />{" "}
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Marketing
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-4 flex">
                     <FaChevronRight className="text-main" />
-                    <a className="hover:text-main px-1" href="#">
+                    <Link className="hover:text-main px-1" href="#">
                       Design
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -129,7 +126,7 @@ const Footer = () => {
                     name="email"
                     placeholder="email@example.com"
                   />
-                  <button className="p-2 rounded-r-lg w-1/3 bg-main text-[#b4aca8] hover:bg-minor">
+                  <button className="p-2 rounded-r-lg w-1/3 bg-main text-white text-base hover:bg-minor">
                     Subscribe
                   </button>
                 </form>
@@ -141,36 +138,36 @@ const Footer = () => {
           <div className="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
             <div className="text-center">
               <div>
-                © Copyright{" "}
+                &copy; {currentYear}
                 <strong>
-                  <span>Livern</span>
+                  <span> Livern</span>
                 </strong>
                 . All Rights Reserved
               </div>
               <div className="">
                 Designed by{" "}
-                <a className="text-main" href="https://orxbit.com/">
+                <Link className="text-main" href="https://orxbit.com/">
                   Orxbit
-                </a>
+                </Link>
               </div>
             </div>
 
-            <div className=" text-xl text-white mb-2">
-              <a href="#" className="w-10 h-10 mx-1 inline-block pt-1">
-                <FaXTwitter className="hover:text-minor w-6 h-6" />
-              </a>
-              <a href="#" className="w-10 h-10 mx-1 inline-block pt-1">
-                <FaFacebookF className="hover:text-minor w-6 h-6" />
-              </a>
-              <a href="#" className="w-10 h-10 mx-1 inline-block pt-1">
-                <FaInstagram className="hover:text-minor w-6 h-6" />
-              </a>
-              <a href="#" className="w-10 h-10 mx-1 inline-block pt-1">
-                <FaTiktok className="hover:text-minor w-6 h-6" />
-              </a>
-              <a href="#" className="w-10 h-10 mx-1 inline-block pt-1">
-                <FaLinkedinIn className="hover:text-minor w-6 h-6" />
-              </a>
+            <div className=" text-xl text-white mt-2 mb-2">
+              <Link href="#" className="w-10 h-10 mx-1 inline-block pt-1">
+                <FaXTwitter className="hover:text-minor w-4 h-4" />
+              </Link>
+              <Link href="#" className="w-10 h-10 mx-1 inline-block pt-1">
+                <FaFacebookF className="hover:text-minor w-4 h-4" />
+              </Link>
+              <Link href="#" className="w-10 h-10 mx-1 inline-block pt-1">
+                <FaInstagram className="hover:text-minor w-4 h-4" />
+              </Link>
+              <Link href="#" className="w-10 h-10 mx-1 inline-block pt-1">
+                <FaTiktok className="hover:text-minor w-4 h-4" />
+              </Link>
+              <Link href="#" className="w-10 h-10 mx-1 inline-block pt-1">
+                <FaLinkedinIn className="hover:text-minor w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>

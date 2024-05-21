@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar-default {
-  @apply transition-all duration-[0.5s] ease-[ease-in-out] 
+  @apply transition-all duration-[0.5s] ease-[ease-in-out] h-16
     bg-navbgMain shadow-[1px_2px_15px_rgba(100,100,100,0.3)];
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -16,7 +16,7 @@
   @apply after:scale-x-100;
 }
 .dropdown-item {
-  @apply transition-all block duration-500 ease-[ease] font-medium
+  @apply transition-all block duration-500 ease-[ease] font-semibold
   min-w-[180px] px-[18px] py-3 text-black  hover:text-main 
   hover:transition-all hover:duration-500 hover:ease-[ease];
 }

@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Lora } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import profileDefault from "@/assets/images/profile.png";
@@ -9,12 +8,6 @@ import dropdown from "@/assets/images/dropdown.svg";
 import menu from "@/assets/images/menu.svg";
 import closeMenu from "@/assets/images/close-menu.svg";
 import { FaGoogle } from "react-icons/fa";
-
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-lora",
-});
 
 const Navbar = () => {
   // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -30,11 +23,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`${lora.className} sticky top-0 w-full navbar-default mx-auto px-4`}
-    >
+    <nav className="fixed z-50 top-0 w-full navbar-default mx-auto px-4">
       {/* Flex container */}
-      <div className="relative flex h-16 items-center justify-between">
+      <div className="relative flex items-center justify-between">
         <div
           onClick={handleMenu}
           className="absolute inset-y-0 left-0 px-2 flex items-center xl:hidden"
@@ -51,7 +42,7 @@ const Navbar = () => {
           <div className="flex flex-shrink-0 items-center">
             {/* <img src="img/logo.png" alt="" /> */}
             <Link
-              className="font-lora text-gray-800 text-[1.8rem] hover:text-main font-medium"
+              className="font-lora text-gray-800 text-[1.8rem] hover:text-main font-semibold"
               href="/"
             >
               Livern
@@ -59,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* Menu Items */}
-        <div className="hidden font-lora pr-28 tracking-[0.04em] text-[1rem] text-gray-800  space-x-6 xl:flex font-medium">
+        <div className="hidden font-lora pr-28 tracking-[0.04em] text-[1rem] text-gray-800 space-x-6 xl:flex font-semibold">
           <Link
             className={`${
               pathname === "/" ? "after:scale-x-100" : ""

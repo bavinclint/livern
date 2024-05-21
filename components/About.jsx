@@ -1,12 +1,6 @@
-import { Libre_Bodoni } from "next/font/google";
-
-const bodoni = Libre_Bodoni({
-  subsets: ["latin"],
-});
-
 const About = () => {
   return (
-    <section className={`${bodoni.className} bg-white py-20 mt-4 mb-4`}>
+    <section className="bg-white py-20 mt-4 mb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold text-black sm:text-5xl md:text-6xl">
